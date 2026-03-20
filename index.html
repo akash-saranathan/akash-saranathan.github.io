@@ -1,115 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Portfolio | AI/ML Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="AI/ML Engineer portfolio — projects, skills, and contact information.">
+    <meta name="author" content="Your Full Name">
+    <meta property="og:title" content="Your Full Name — AI/ML Engineer">
+    <meta property="og:description" content="AI/ML Engineer portfolio showcasing production ML systems, research, and projects.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb; /* Professional Blue */
-            --dark: #0f172a;    /* Deep Tech Navy */
-            --light: #f8fafc;
-            --text: #334155;
+        :root{
+            --bg:#0f1724;
+            --card:#0b1220;
+            --muted:#94a3b8;
+            --accent:#2563eb;
+            --glass: rgba(255,255,255,0.03);
+            --max:1100px;
+            --radius:12px;
+            color-scheme: dark;
         }
+        *{box-sizing:border-box}
+        html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#071023 0%, #071827 60%);-webkit-font-smoothing:antialiased}
+        header{position:sticky;top:0;z-index:30;background:linear-gradient(180deg, rgba(3,7,18,0.6), rgba(3,7,18,0.35));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.04)}
+        .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:20px}
+        nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        .nav-links{display:flex;gap:12px;align-items:center}
+        .nav-links a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+        .nav-links a:hover{color:white;background:rgba(255,255,255,0.03)}
+        .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
 
-        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--light); color: var(--text); scroll-behavior: smooth; }
-        
-        /* Hero Section */
-        header {
-            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--primary);
-        }
+        /* Hero */
+        .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:60px 20px}
+        .hero-inner{display:grid;grid-template-columns:1fr;gap:24px}
+        .headline{font-size:clamp(1.6rem,3.5vw,2.6rem);line-height:1.05;margin:0;color:#e6eef8}
+        .lead{color:var(--muted);margin:0 0 8px 0}
+        .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--primary);
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-        }
+        .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:20px;border-radius:var(--radius);display:flex;gap:16px;align-items:center}
+        .avatar{width:96px;height:96px;border-radius:14px;object-fit:cover;border:3px solid rgba(255,255,255,0.04)}
+        .meta{display:flex;flex-direction:column}
+        .meta h1{font-size:1.2rem;margin:0}
+        .meta p{margin:4px 0 0 0;color:var(--muted);font-size:0.95rem}
 
-        h1 { margin: 10px 0; font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; }
-        .headline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 25px; font-weight: 300; }
+        /* Sections */
+        main{max-width:var(--max);margin:0 auto;padding:20px}
+        section{margin:28px 0}
+        .card{background:linear-gradient(180deg,var(--card), #07101a);border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.03)}
+        h2{margin:0 0 12px 0;color:#dbeafe}
 
-        /* Buttons */
-        .btn-container { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
-        .btn {
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
-        .btn-outline { border: 2px solid var(--primary); color: white; }
-        .btn-outline:hover { background: rgba(37, 99, 235, 0.1); transform: translateY(-2px); }
+        .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+        .skills{display:flex;flex-wrap:wrap;gap:10px}
+        .pill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
 
-        /* Section Styling */
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        h2 { font-size: 1.8rem; border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 30px; }
-        
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
+        .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+        .project{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+        .project h3{margin:0 0 6px 0;color:#e6eef8}
+        .project p{margin:0;color:var(--muted);font-size:0.95rem}
 
-        /* AI/ML Specific Tech Stack Tags */
-        .tag {
-            display: inline-block;
-            background: #e2e8f0;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin: 5px;
-            color: var(--dark);
-            font-weight: 600;
+        footer{padding:26px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+
+        @media(min-width:900px){
+            .hero{grid-template-columns:1fr 380px}
+            .hero-inner{grid-template-columns:1fr}
         }
     </style>
+    <script>
+        // Small accessible nav toggle for mobile
+        function toggleMenu(){const m=document.getElementById('nav');m.style.display = m.style.display === 'flex' ? 'none' : 'flex'}
+    </script>
 </head>
 <body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">
+                    <div class="logo">YS</div>
+                    <div>
+                        <div style="font-weight:800;color:#e6eef8">Your Full Name</div>
+                        <div style="font-size:12px;color:var(--muted)">AI/ML Engineer</div>
+                    </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px">
+                    <div class="nav-links" id="nav" style="display:flex">
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <a class="btn-primary" href="mailto:your-email@example.com">Hire Me</a>
+                    <button aria-label="menu" onclick="toggleMenu()" style="display:none;background:transparent;border:0;color:var(--muted)">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <img src="profile.jpg" alt="Your Name" class="profile-img">
-    <h1>Your Full Name</h1>
-    <p class="headline">AI/ML Engineer | Deep Learning & Data Science Enthusiast</p>
-    
-    <div class="btn-container">
-        <a href="mailto:your-email@example.com" class="btn btn-primary">Hire Me</a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" class="btn btn-outline">LinkedIn</a>
-        <a href="#projects" class="btn btn-outline">View Projects</a>
-    </div>
-</header>
+    <section class="hero">
+        <div class="wrap hero-inner">
+            <div>
+                <p class="lead">Building production ML systems & research prototypes</p>
+                <h1 class="headline">Hi — I'm Your Full Name. I build scalable machine learning systems that drive product value.</h1>
+                <p style="color:var(--muted);max-width:60ch">Experienced in deep learning, MLOps, and applied research. I design models, build pipelines, and ship reliable ML features for end users.</p>
+                <div class="hero-ctas" style="margin-top:16px">
+                    <a class="btn-primary" href="#projects">View Projects</a>
+                    <a href="/resume.pdf" style="color:var(--muted);padding:10px 14px;border-radius:10px;background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.03)">Resume</a>
+                </div>
+            </div>
 
-<div class="container">
-    <section id="about" class="card">
-        <h2>Professional Summary</h2>
-        <p>Dynamic AI/ML Engineer focused on developing intelligent systems that solve real-world problems. Specialized in Python, Neural Networks, and Data Visualization. I bridge the gap between complex data and actionable insights.</p>
-    </section>
-
-    <section id="skills" class="card">
-        <h2>Core Technologies</h2>
-        <div>
-            <span class="tag">Python</span>
-            <span class="tag">TensorFlow / PyTorch</span>
-            <span class="tag">Scikit-Learn</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Natural Language Processing</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Git / GitHub</span>
-            <span class="tag">FastAPI / Flask</span>
+            <aside class="profile-card">
+                <img src="profile.jpg" alt="Your Name" class="avatar">
+                <div class="meta">
+                    <h1>Your Full Name</h1>
+                    <p>AI/ML Engineer — Deep Learning, NLP, Computer Vision</p>
+                    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+                        <a href="https://github.com/your-profile" target="_blank" style="color:var(--muted);text-decoration:none">GitHub</a>
+                        <a href="https://linkedin.com/in/your-profile" target="_blank" style="color:var(--muted);text-decoration:none">LinkedIn</a>
+                    </div>
+                </div>
+            </aside>
         </div>
     </section>
-</div>
 
+    <main>
+        <section id="about" class="card">
+            <h2>About — Summary</h2>
+            <p style="color:var(--muted);max-width:70ch">I am an AI/ML Engineer with experience shipping end-to-end machine learning features in production. My work spans data engineering, model development, evaluation, and deployment. I prioritize robust evaluation, reproducibility, and monitoring to ensure models deliver long-term value.</p>
+        </section>
+
+        <section id="projects">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <h2>Selected Projects</h2>
+                <div style="color:var(--muted);font-weight:600">Full list on <a href="https://github.com/your-profile" style="color:var(--accent);text-decoration:none">GitHub</a></div>
+            </div>
+            <div class="projects-grid">
+                <article class="project">
+                    <h3>Production Recommendation System</h3>
+                    <p>Designed a lightweight ranking model and feature pipeline; reduced latency by 40% and improved CTR by 8% in A/B test.</p>
+                </article>
+                <article class="project">
+                    <h3>NLP Customer Insights</h3>
+                    <p>Built an intent classification pipeline using transformers and active learning for long-tail intents.</p>
+                </article>
+                <article class="project">
+                    <h3>Computer Vision — Defect Detection</h3>
+                    <p>Developed an ensemble model and automated labeling tooling; integrated CI for continual evaluation.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Core Skills</h2>
+            <div class="skills">
+                <span class="pill">Python</span>
+                <span class="pill">PyTorch / TensorFlow</span>
+                <span class="pill">MLOps / MLflow</span>
+                <span class="pill">Docker & Kubernetes</span>
+                <span class="pill">NLP & Transformers</span>
+                <span class="pill">Computer Vision</span>
+                <span class="pill">SQL / BigQuery</span>
+                <span class="pill">FastAPI / Flask</span>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p style="color:var(--muted)">I'm available for consulting and full-time opportunities. Send a short message and resume.</p>
+            <p style="margin-top:12px"><a href="mailto:your-email@example.com" class="btn-primary">Email Me</a></p>
+        </section>
+
+        <footer>
+            <div style="display:flex;justify-content:space-between;align-items:center;max-width:var(--max);margin:0 auto;padding:10px 20px">
+                <div>&copy; <span id="year"></span> Your Full Name</div>
+                <div style="color:var(--muted)">Built with care • Accessible • Performance-minded</div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // small enhancement: set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
