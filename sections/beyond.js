@@ -6,7 +6,7 @@ const BEYOND_CONTENT = `
     <div class="byd-strip-text">
       <span class="byd-chip">🏏 Cricket</span>
       <h3 class="byd-strip-title">Chennai Districts<br>Cricket Player</h3>
-      <p class="byd-strip-para">The crease taught me patience, precision, and performing under pressure — lessons I carry into every project. Proud to have represented Chennai Districts in competitive cricket through college.</p>
+      <p class="byd-strip-para">As an all-rounder, the crease taught me patience, precision, and performing under pressure—qualities I carry into every project. Proud to have represented Chennai districts in competitive cricket through college.</p>
       <div class="byd-pill navy">🏆 Chennai Districts Representative</div>
     </div>
     <div class="byd-strip-visual">
@@ -32,7 +32,7 @@ const BEYOND_CONTENT = `
     <div class="byd-strip-text">
       <span class="byd-chip purple">🎹 Keyboard & Music</span>
       <h3 class="byd-strip-title">Trinity College London<br>Grade 7 Certified with Distinction</h3>
-      <p class="byd-strip-para">Seven grades of classical keyboard training with Trinity College London. Music is my creative reset — it sharpens focus, builds discipline, and reminds me that true mastery takes time. And yes — Thala for a reason! 🦁</p>
+      <p class="byd-strip-para">Completed seven grades of classical keyboard training with Trinity College London. Music is my creative reset—it sharpens focus, builds discipline, and proves that mastery takes time. Seven, after all… Thala for a reason. 🦁</p>
       <div class="byd-pill purple">🎓 Trinity London — Grade 7</div>
     </div>
   </div>
@@ -73,7 +73,7 @@ const BEYOND_CONTENT = `
     <div class="byd-strip-text">
       <span class="byd-chip green">🌱 Gardening</span>
       <h3 class="byd-strip-title">Green Fingers</h3>
-      <p class="byd-strip-para">Growing plants is surprisingly similar to building ML models — patience, careful nurturing, and the deep satisfaction of watching something come to life from scratch. My little green corner keeps me grounded and reminds me to slow down.</p>
+      <p class="byd-strip-para">Growing plants teaches me patience—the joy of putting in consistent care and eventually watching hard work come alive as it bears fruit. My little green corner keeps me grounded and reminds me to slow down.</p>
     </div>
   </div>
 
@@ -91,9 +91,9 @@ const BEYOND_CONTENT = `
       <div class="ticker-wrap">
         <div class="ticker-inner">
           <span>🥒 Pickleball</span><span>🏸 Badminton</span><span>🎱 Billiards</span>
-          <span>🏊 Swimming</span><span>🎳 Bowling</span><span>⛳ Golf</span><span>🚗 Driving</span>
+          <span>🏊 Swimming</span><span>🎳 Bowling</span><span>⛳ Golf</span><span>🏎️ Karting</span>
           <span>🥒 Pickleball</span><span>🏸 Badminton</span><span>🎱 Billiards</span>
-          <span>🏊 Swimming</span><span>🎳 Bowling</span><span>⛳ Golf</span><span>🚗 Driving</span>
+          <span>🏊 Swimming</span><span>🎳 Bowling</span><span>⛳ Golf</span>
         </div>
       </div>
     </div>

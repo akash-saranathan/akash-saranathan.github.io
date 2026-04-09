@@ -3,8 +3,8 @@ const CONTACT_CONTENT = `
   <div class="contact-wrap">
 
     <div class="contact-intro">
-      <p class="contact-tagline">That's a little about me!</p>
-      <p class="contact-sub">Whether it's technology, sports, music, or just a good conversation — I wouldd love to hear from you. Let's connect, collaborate, or simply chat!</p>
+      <p class="contact-tagline">Let’s connect</p>
+      <p class="contact-sub">Whether it’s technology, sports, music, or collaboration — I would love to hear from you. Open to ideas, discussions, and fruitful conversations.</p>
     </div>
 
     <div class="contact-cards-row">

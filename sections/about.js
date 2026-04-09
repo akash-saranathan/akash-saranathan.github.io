@@ -7,16 +7,16 @@ const ABOUT_CONTENT = `
   <!-- Stat cards — full width -->
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px;width:100%;">
     <div class="about-stat">
-      <span class="about-stat-number">5+</span>
-      <span class="about-stat-label">Years of Experience</span>
+      <span class="about-stat-number">6+</span>
+      <span class="about-stat-label">Years of Building & Learning</span>
     </div>
     <div class="about-stat">
-      <span class="about-stat-number">20+</span>
+      <span class="about-stat-number">15+</span>
       <span class="about-stat-label">Projects Delivered</span>
     </div>
     <div class="about-stat">
-      <span class="about-stat-number">3</span>
-      <span class="about-stat-label">Industry Domains</span>
+      <span class="about-stat-number">40+</span>
+      <span class="about-stat-label">Certifications Earned</span>
     </div>
     <div class="about-stat">
       <span class="about-stat-number">10+</span>
@@ -44,7 +44,7 @@ const ABOUT_CONTENT = `
     <div class="about-bio-block">
       <h3 class="about-bio-title">What Drives Me</h3>
       <p>
-        Driven by curiosity to explore emerging technologies and build systems that make a <strong>meaningful difference</strong>. I enjoy solving complex problems across interdisciplinary domains and contributing to impactful, forward-thinking teams.
+        Driven by curiosity to explore <strong>emerging technologies </strong> and build systems that make a meaningful difference. I enjoy solving complex problems across <strong>interdisciplinary domains</strong> and contributing to impactful, forward-thinking teams, while naturally connecting across languages including Tamil, English, Hindi, French, Malayalam, and a bit of Telugu and Arabic.
       </p>
     </div>
 
