@@ -188,7 +188,25 @@ html {
     .about-bio { max-width: 100%; display: flex; flex-direction: column; gap: 16px; }
     .about-bio p { font-size: 1.08rem; color: var(--section-text) !important; line-height: 1.8; }
     .about-bio strong { color: var(--accent); }
-
+    .menu-toggle { display:none; cursor:pointer; font-size:26px; color:#fff; }
+@media(max-width:900px) {
+  .menu-toggle { display:block; }
+  nav ul { display:none; flex-direction:column; position:absolute; top:60px; right:0; background:var(--nav-bg); width:220px; padding:20px; gap:16px; border-radius:0 0 12px 12px; }
+  nav ul.open { display:flex; }
+  nav ul li { margin-left:0; }
+  section { padding:80px 20px 60px; }
+  .proj-grid { grid-template-columns:repeat(2,1fr) !important; }
+  .contact-cards-row { grid-template-columns:1fr 1fr !important; }
+  .skills-grid { grid-template-columns:1fr !important; }
+  .skill-card:nth-child(n) { grid-column:span 1 !important; }
+  .exp-timeline { padding-left:0; }
+  .exp-timeline::before { display:none; }
+  .exp-item { flex-direction:column; gap:12px; }
+  .byd-strip,.byd-strip.reverse { flex-direction:column !important; gap:28px; }
+  .byd-full-strip { flex-direction:column; }
+  .cricket-stats { justify-content:center; }
+  .edu-header { flex-direction:column; }
+}
 
   </style>
 </head>
@@ -197,6 +215,7 @@ html {
   <!-- Navbar -->
   <nav>
     <a href="#top" class="logo">Akash Saranathan</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -337,6 +356,16 @@ html {
       });
     })();
   </script>
+
+  <script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('open');
+}
+// Close menu when a link is clicked
+document.querySelectorAll('#nav-menu a').forEach(function(a) {
+  a.onclick = function() { document.getElementById('nav-menu').classList.remove('open'); };
+});
+</script>
 
 </body>
 </html>
