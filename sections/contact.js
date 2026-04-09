@@ -36,13 +36,7 @@ const CONTACT_CONTENT = `
         <span class="contact-card-arrow">→</span>
       </a>
 
-      <a href="tel:+1234567890" class="contact-card">
-        <div class="contact-card-icon phone-icon">📱</div>
-        <span class="contact-card-label">Phone</span>
-        <span class="contact-card-value">+1 123 456 7890</span>
-        <span class="contact-card-arrow">→</span>
-      </a>
-
+      
     </div>
 
     <div class="contact-footer">
@@ -77,7 +71,7 @@ const CONTACT_CONTENT = `
     }
     .contact-cards-row {
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(3,1fr);
       gap:16px;
       width:100%;
     }
