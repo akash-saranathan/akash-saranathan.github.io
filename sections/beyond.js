@@ -42,7 +42,7 @@ const BEYOND_CONTENT = `
     <div class="byd-strip-text">
       <span class="byd-chip blue">✈️ Travel & Exploration</span>
       <h3 class="byd-strip-title">World Explorer</h3>
-      <p class="byd-strip-para">Every trip adds a new dimension to how I think and solve problems. Experiencing different cultures and perspectives is the best education. San Diego holds a special place — sunsets, ocean, and the best burritos! 🌮</p>
+      <p class="byd-strip-para">Every trip adds a new dimension to how I think and solve problems. Experiencing different cultures and perspectives is the best education. Abu Dhabi holds a special place — breathtaking architecture, world-class sightseeing, and a city with a personal story woven into its skyline! 🌮</p>
       <div class="travel-places">
         <span>📍 Chennai</span>
         <span>📍 Abu Dhabi</span>
