@@ -1,188 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Portfolio | AI/ML Engineer</title>
-    <meta name="description" content="AI/ML Engineer portfolio — projects, skills, and contact information.">
-    <meta name="author" content="Your Full Name">
-    <meta property="og:title" content="Your Full Name — AI/ML Engineer">
-    <meta property="og:description" content="AI/ML Engineer portfolio showcasing production ML systems, research, and projects.">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --bg:#0f1724;
-            --card:#0b1220;
-            --muted:#94a3b8;
-            --accent:#2563eb;
-            --glass: rgba(255,255,255,0.03);
-            --max:1100px;
-            --radius:12px;
-            color-scheme: dark;
-        }
-        *{box-sizing:border-box}
-        html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#071023 0%, #071827 60%);-webkit-font-smoothing:antialiased}
-        header{position:sticky;top:0;z-index:30;background:linear-gradient(180deg, rgba(3,7,18,0.6), rgba(3,7,18,0.35));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.04)}
-        .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:20px}
-        nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-        .brand{display:flex;align-items:center;gap:12px}
-        .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-        .nav-links{display:flex;gap:12px;align-items:center}
-        .nav-links a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
-        .nav-links a:hover{color:white;background:rgba(255,255,255,0.03)}
-        .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | AI/ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* General */
+    :root{
+      --page-bg1: #0b2540; /* lighter gradient start */
+      --page-bg2: #0f3a60; /* lighter gradient end */
+      --accent: #a7dde3; /* green accent */
+      --nav-bg: rgba(15,45,75,0.95);
+      --section-bg: #ffffff; /* white section background */
+      --section-text: #0b1220; /* dark text inside white sections */
+      --card-bg: #ffffff;
+      --muted: #56636f;
+      --content-color: #f59e0b; /* yellow for content text */
+      --hero-bg: url('images/hero-bg.jpg');
+      --hero-overlay: linear-gradient(rgba(2,6,23,0.68), rgba(2,6,23,0.48));
+      --c1: #7C3AED; /* purple */
+      --c2: #2563EB; /* blue */
+      --c3: #FB923C; /* coral */
+      --c4: #1fbe5c; /* magenta - distinct from coral/yellow */
+    }
 
-        /* Hero */
-        .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:60px 20px}
-        .hero-inner{display:grid;grid-template-columns:1fr;gap:24px}
-        .headline{font-size:clamp(1.6rem,3.5vw,2.6rem);line-height:1.05;margin:0;color:#e6eef8}
-        .lead{color:var(--muted);margin:0 0 8px 0}
-        .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+    /* * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; scroll-padding-top: 10px;} */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 80px; /* This matches your navbar height + some breathing room */
+}
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; background: linear-gradient(to right, var(--page-bg1), var(--page-bg2)); color: #fff; }
 
-        .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:20px;border-radius:var(--radius);display:flex;gap:16px;align-items:center}
-        .avatar{width:96px;height:96px;border-radius:14px;object-fit:cover;border:3px solid rgba(255,255,255,0.04)}
-        .meta{display:flex;flex-direction:column}
-        .meta h1{font-size:1.2rem;margin:0}
-        .meta p{margin:4px 0 0 0;color:var(--muted);font-size:0.95rem}
+    a { text-decoration: none; color: inherit; }
 
-        /* Sections */
-        main{max-width:var(--max);margin:0 auto;padding:20px}
-        section{margin:28px 0}
-        .card{background:linear-gradient(180deg,var(--card), #07101a);border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.03)}
-        h2{margin:0 0 12px 0;color:#dbeafe}
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: var(--nav-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 50px;
+      z-index: 1000;
+    }
+    nav .logo { font-weight: bold; font-size: 24px; transition: transform .18s ease, color .18s ease; cursor: pointer }
+    nav .logo:hover { transform: translateY(-3px); color: var(--accent) }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 30px; }
+    nav ul li a { font-weight: 600; position: relative; transition: 0.3s; font-size: 1.05rem }
+    nav ul li a::after{ content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: var(--accent); transition: width .28s ease }
+    nav ul li a:hover::after{ width: 100% }
+    nav ul li a:hover { color: var(--accent); }
 
-        .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-        .skills{display:flex;flex-wrap:wrap;gap:10px}
-        .pill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* ensure hero fills first viewport so next sections are below the fold */
+      text-align: center;
+      background: var(--hero-overlay), var(--hero-bg);
+      background-size: cover;
+      background-position: center;
+      gap: 12px;
+      padding: 40px 20px;
+    }
+    .hero img {
+      width: 280px; height: 280px;
+      border-radius: 50%; object-fit: cover;
+      border: 4px solid var(--accent);
+    }
 
-        .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-        .project{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
-        .project h3{margin:0 0 6px 0;color:#e6eef8}
-        .project p{margin:0;color:var(--muted);font-size:0.95rem}
+    
+    .hero h1, .hero h2, .hero p {
+      opacity: 0; transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    .hero h1 { animation-delay: 0.2s; font-size: clamp(2.8rem, 7.2vw, 4.8rem); margin-bottom: 6px; color: rgba(255,255,255,0.98); line-height:1.02; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-weight:800 }
+    .hero h2 { animation-delay: 0.5s; font-size: clamp(1.4rem, 3.4vw, 1.9rem); color: var(--accent); margin-bottom: 18px; font-weight:700 }
+    .hero p { animation-delay: 0.8s; max-width: 80ch; font-size: 1.22rem; color: #FB6B6B; margin-bottom: 12px; font-weight:700 }
 
-        footer{padding:26px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+    /* content color for paragraphs, project descriptions and skills */
+    section p, .project-card p { color: var(--content-color); }
+    .skill { color: var(--content-color); font-weight:700 }
 
-        @media(min-width:900px){
-            .hero{grid-template-columns:1fr 380px}
-            .hero-inner{grid-template-columns:1fr}
-        }
-    </style>
-    <script>
-        // Small accessible nav toggle for mobile
-        function toggleMenu(){const m=document.getElementById('nav');m.style.display = m.style.display === 'flex' ? 'none' : 'flex'}
-    </script>
+    /* Animated multicolor name letters */
+    .name-letter{display:inline-block;opacity:0;transform:translateY(8px);}
+    @keyframes letterIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none}}
+    .hero .socials a { margin: 0 10px; font-size: 24px; transition: 0.3s; }
+    .hero .socials a:hover { color: var(--accent); }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 40px; /* full-bleed section background */
+      margin: 0; /* full width */
+      min-height: 100vh;
+      scroll-margin-top: 20px;
+      background: var(--section-bg);
+      color: var(--section-text);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+    /* constrain inner content while keeping section background full-bleed */
+    /*section > * { max-width: 1400px; margin: 0 auto; }*/
+    section > * { width: 100%; }
+    section.visible { opacity: 1; transform: translateY(0); }
+    /* when a section becomes visible, animate inner cards/skills too */
+    section.visible .project-card, section.visible .skill { opacity: 1; transform: none }
+    section h2 {
+  font-size: 36px;
+  margin: 0 0 40px 0;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  display: block;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .project-card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+      opacity: 0; transform: translateY(16px); transition: transform .6s ease, opacity .6s ease, box-shadow .3s ease;
+      color: var(--section-text);
+    }
+    .project-card:hover {
+      background: #f3f7f8;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    }
+    .project-card a { color: var(--accent); font-weight: 500; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 15px; }
+    .skill {
+      background: var(--card-bg);
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+      opacity: 0; transform: translateY(10px); transition: transform .6s ease, opacity .6s ease;
+      color: var(--section-text);
+    }
+    .skill:hover {
+      background: #f3f7f8;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    }
+
+    /* Contact Icons */
+    .contact a { font-size: 28px; margin-right: 20px; color: #fff; transition: 0.3s; }
+    .contact a:hover { color: var(--accent); }
+
+    /* contact link colors */
+    .contact-link{font-weight:700;color:var(--accent);text-decoration:none}
+    .contact-link.c1{color:var(--c1)}
+    .contact-link.c2{color:var(--c2)}
+    .contact-link.c3{color:var(--c3)}
+    .contact-link.c4{color:var(--c4)}
+
+    /* Responsive */
+    @media(max-width:768px) {
+      nav ul { flex-direction: column; background: var(--nav-bg); position: absolute; top: 60px; right: -100%; transition: 0.3s; width: 200px; }
+      nav ul.active { right: 0; }
+      nav ul li { margin: 20px 0; }
+      .menu-toggle { display: block; cursor: pointer; font-size: 24px; color: #fff; }
+    }
+
+    .about-stat { background: var(--card-bg); border-radius: 10px; padding: 24px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform .3s ease, box-shadow .3s ease; }
+    .about-stat:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .about-stat-number { display: block; font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+    .about-stat-label { font-size: 0.9rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .about-bio { max-width: 100%; display: flex; flex-direction: column; gap: 16px; }
+    .about-bio p { font-size: 1.08rem; color: var(--section-text) !important; line-height: 1.8; }
+    .about-bio strong { color: var(--accent); }
+
+
+  </style>
 </head>
-<body>
-    <header>
-        <div class="wrap">
-            <nav>
-                <div class="brand">
-                    <div class="logo">YS</div>
-                    <div>
-                        <div style="font-weight:800;color:#e6eef8">Your Full Name</div>
-                        <div style="font-size:12px;color:var(--muted)">AI/ML Engineer</div>
-                    </div>
-                </div>
-                <div style="display:flex;align-items:center;gap:12px">
-                    <div class="nav-links" id="nav" style="display:flex">
-                        <a href="#about">About</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                    <a class="btn-primary" href="mailto:your-email@example.com">Hire Me</a>
-                    <button aria-label="menu" onclick="toggleMenu()" style="display:none;background:transparent;border:0;color:var(--muted)">☰</button>
-                </div>
-            </nav>
-        </div>
-    </header>
+<body id="top">
 
-    <section class="hero">
-        <div class="wrap hero-inner">
-            <div>
-                <p class="lead">Building production ML systems & research prototypes</p>
-                <h1 class="headline">Hi — I'm Your Full Name. I build scalable machine learning systems that drive product value.</h1>
-                <p style="color:var(--muted);max-width:60ch">Experienced in deep learning, MLOps, and applied research. I design models, build pipelines, and ship reliable ML features for end users.</p>
-                <div class="hero-ctas" style="margin-top:16px">
-                    <a class="btn-primary" href="#projects">View Projects</a>
-                    <a href="/resume.pdf" style="color:var(--muted);padding:10px 14px;border-radius:10px;background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.03)">Resume</a>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav>
+    <a href="#top" class="logo">Akash Saranathan</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#beyond">Beyond Code</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-            <aside class="profile-card">
-                <img src="profile.jpg" alt="Your Name" class="avatar">
-                <div class="meta">
-                    <h1>Your Full Name</h1>
-                    <p>AI/ML Engineer — Deep Learning, NLP, Computer Vision</p>
-                    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-                        <a href="https://github.com/your-profile" target="_blank" style="color:var(--muted);text-decoration:none">GitHub</a>
-                        <a href="https://linkedin.com/in/your-profile" target="_blank" style="color:var(--muted);text-decoration:none">LinkedIn</a>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="images/profile.jpg" alt="Your Photo">
+    <h1>Akash Saranathan</h1>
+    <h2>AI/ML Engineer | Data Scientist | LLM Researcher | Mentor</h2>
+    <p>I build scalable machine learning systems, LLM-powered applications, and interactive AI solutions for real-world problems.</p>
+                <div class="socials" style="margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center">
+                <a class="contact-link c1" href="tel:+11234567890">Phone</a>
+                <a class="contact-link c2" href="mailto:example@example.com">Email</a>
+                <a class="contact-link c3" href="https://www.linkedin.com/in/a-saranathan" target="_blank">LinkedIn</a>
+                <a class="contact-link c4" href="https://github.com/akash-saranathan" target="_blank">GitHub</a>
+              </div>
+  </section>
 
-    <main>
-        <section id="about" class="card">
-            <h2>About — Summary</h2>
-            <p style="color:var(--muted);max-width:70ch">I am an AI/ML Engineer with experience shipping end-to-end machine learning features in production. My work spans data engineering, model development, evaluation, and deployment. I prioritize robust evaluation, reproducibility, and monitoring to ensure models deliver long-term value.</p>
-        </section>
+  <!-- About -->
+  <section id="about">
+    <h2>👤 About</h2>
+    <div id="about-content"></div>
+    <script src="sections/about.js"></script>
+  </section>
 
-        <section id="projects">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-                <h2>Selected Projects</h2>
-                <div style="color:var(--muted);font-weight:600">Full list on <a href="https://github.com/your-profile" style="color:var(--accent);text-decoration:none">GitHub</a></div>
-            </div>
-            <div class="projects-grid">
-                <article class="project">
-                    <h3>Production Recommendation System</h3>
-                    <p>Designed a lightweight ranking model and feature pipeline; reduced latency by 40% and improved CTR by 8% in A/B test.</p>
-                </article>
-                <article class="project">
-                    <h3>NLP Customer Insights</h3>
-                    <p>Built an intent classification pipeline using transformers and active learning for long-tail intents.</p>
-                </article>
-                <article class="project">
-                    <h3>Computer Vision — Defect Detection</h3>
-                    <p>Developed an ensemble model and automated labeling tooling; integrated CI for continual evaluation.</p>
-                </article>
-            </div>
-        </section>
+  <!-- Experience -->
+  <section id="experience">
+    <h2>💼 Experience</h2>
+    <div id="experience-content"></div>
+    <script src="sections/experience.js"></script>
+  </section>
 
-        <section id="skills" class="card">
-            <h2>Core Skills</h2>
-            <div class="skills">
-                <span class="pill">Python</span>
-                <span class="pill">PyTorch / TensorFlow</span>
-                <span class="pill">MLOps / MLflow</span>
-                <span class="pill">Docker & Kubernetes</span>
-                <span class="pill">NLP & Transformers</span>
-                <span class="pill">Computer Vision</span>
-                <span class="pill">SQL / BigQuery</span>
-                <span class="pill">FastAPI / Flask</span>
-            </div>
-        </section>
+  <!-- Teaching -->
+  <section id="teaching">
+    <h2>🎓 Teaching</h2>
+    <div id="teaching-content"></div>
+    <script src="sections/teaching.js"></script>
+  </section>
 
-        <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p style="color:var(--muted)">I'm available for consulting and full-time opportunities. Send a short message and resume.</p>
-            <p style="margin-top:12px"><a href="mailto:your-email@example.com" class="btn-primary">Email Me</a></p>
-        </section>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>🛠️ Skills</h2>
+    <div id="skills-content"></div>
+    <script src="sections/skills.js"></script>
+  </section>
 
-        <footer>
-            <div style="display:flex;justify-content:space-between;align-items:center;max-width:var(--max);margin:0 auto;padding:10px 20px">
-                <div>&copy; <span id="year"></span> Your Full Name</div>
-                <div style="color:var(--muted)">Built with care • Accessible • Performance-minded</div>
-            </div>
-        </footer>
-    </main>
+  <!-- Education -->
+  <section id="education">
+    <h2>🎓 Education</h2>
+    <div id="education-content"></div>
+    <script src="sections/education.js"></script>
+  </section>
 
-    <script>
-        // small enhancement: set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+ <!-- Research & Publications -->
+ <section id="research">
+   <h2>🔬 Research & Publications</h2>
+   <div id="research-content"></div>
+   <script src="sections/research.js"></script>
+ </section>
+
+ <!-- Projects -->
+ <section id="projects">
+   <h2>🚀 Projects</h2>
+   <div id="projects-content"></div>
+   <script src="sections/projects.js"></script>
+ </section>
+
+  <!-- Certifications -->
+<section id="certifications">
+  <h2>📜 Certifications</h2>
+  <div id="certifications-content"></div>
+  <script src="sections/certifications.js"></script>
+</section>
+
+  <!-- Beyond Code -->
+<section id="beyond">
+  <h2>🌟 Beyond Code</h2>
+  <div id="beyond-content"></div>
+  <script src="sections/beyond.js"></script>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>📬 Contact</h2>
+  <div id="contact-content"></div>
+  <script src="sections/contact.js"></script>
+</section>
+
+  <!-- Scripts -->
+  <script>
+    // Section fade-in on scroll with small stagger for inner items
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const trigger = window.innerHeight - 100;
+        if (sectionTop < trigger && !section.classList.contains('visible')){
+          section.classList.add('visible');
+          // stagger project cards and skills
+          const cards = section.querySelectorAll('.project-card');
+          cards.forEach((c, i) => c.style.transitionDelay = (i * 80) + 'ms');
+          const skills = section.querySelectorAll('.skill');
+          skills.forEach((s, i) => s.style.transitionDelay = (i * 40) + 'ms');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealSection, {passive:true});
+    window.addEventListener('load', revealSection);
+  </script>
+
+  <script>
+    // Animated multicolor name: split letters into spans and animate
+    (function(){
+      const h1 = document.querySelector('.hero h1');
+      if(!h1) return;
+      const text = h1.textContent.trim();
+      h1.textContent = ''; // clear
+      const colors = [getComputedStyle(document.documentElement).getPropertyValue('--c1').trim(), getComputedStyle(document.documentElement).getPropertyValue('--c2').trim(), getComputedStyle(document.documentElement).getPropertyValue('--c3').trim(), getComputedStyle(document.documentElement).getPropertyValue('--c4').trim()];
+      Array.from(text).forEach((ch, i)=>{
+        const span = document.createElement('span');
+        span.className = 'name-letter';
+        span.textContent = ch;
+        // skip coloring spaces
+        if(ch.trim().length === 0){ span.style.width = '0.4em'; }
+        else { span.style.color = colors[i % colors.length]; }
+        span.style.animation = `letterIn .45s forwards ${i * 80}ms`;
+        h1.appendChild(span);
+      });
+    })();
+  </script>
+
 </body>
 </html>
