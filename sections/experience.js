@@ -2,9 +2,7 @@
 //  EXPERIENCE SECTION — edit content here
 // ─────────────────────────────────────────────
 
-const EXPERIENCE_CONTENT = `
-
-  <div class="exp-timeline">
+const EXPERIENCE_CONTENT = `<div class="exp-timeline">
 
     <!-- Xforia -->
     <div class="exp-item">
@@ -279,7 +277,7 @@ const EXPERIENCE_CONTENT = `
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
-      margin-top: 4px;
+      /* margin-top: 4px; */
     }
     .exp-tags span {
       background: #e0f2f4;
@@ -294,4 +292,6 @@ const EXPERIENCE_CONTENT = `
 
 `;
 
-document.getElementById('experience-content').innerHTML = EXPERIENCE_CONTENT;
+// document.getElementById('experience-content').innerHTML = EXPERIENCE_CONTENT;
+document.getElementById('experience-content').innerHTML = EXPERIENCE_CONTENT.trim();
+

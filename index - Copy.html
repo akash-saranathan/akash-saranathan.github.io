@@ -30,12 +30,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 html { 
   scroll-behavior: smooth; 
-  scroll-padding-top: 64px; /* exact navbar height + small breathing room */
-}
-
-/* Mobile adjustment */
-@media(max-width:900px){
-  html { scroll-padding-top: 100px; } /* account for mobile menu height */
+  scroll-padding-top: 80px; /* This matches your navbar height + some breathing room */
 }
     body { font-family: 'Roboto', sans-serif; line-height: 1.6; background: linear-gradient(to right, var(--page-bg1), var(--page-bg2)); color: #fff; }
 
@@ -199,10 +194,7 @@ html {
   nav ul { display:none; flex-direction:column; position:absolute; top:60px; right:0; background:var(--nav-bg); width:220px; padding:20px; gap:16px; border-radius:0 0 12px 12px; }
   nav ul.open { display:flex; }
   nav ul li { margin-left:0; }
-  section { padding:60px 15px 40px; }
-  .hero { padding:20px 10px; }         /* reduce hero padding */
-.hero h1 { font-size: clamp(2rem, 10vw, 3rem); }
-.hero h2 { font-size: clamp(1rem, 4vw, 1.5rem); }
+  section { padding:80px 20px 60px; }
   .proj-grid { grid-template-columns:repeat(2,1fr) !important; }
   .contact-cards-row { grid-template-columns:1fr 1fr !important; }
   .skills-grid { grid-template-columns:1fr !important; }
@@ -372,21 +364,6 @@ function toggleMenu() {
 // Close menu when a link is clicked
 document.querySelectorAll('#nav-menu a').forEach(function(a) {
   a.onclick = function() { document.getElementById('nav-menu').classList.remove('open'); };
-});
-</script>
-<script>
-// Fix extra space on revisiting sections with dynamic content
-window.addEventListener('load', () => {
-  // If URL has a hash like #about, #projects, etc.
-  if(window.location.hash){
-    const target = document.querySelector(window.location.hash);
-    if(target){
-      // Small delay to let JS content load
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 50); // 50ms usually works; increase to 100ms if needed
-    }
-  }
 });
 </script>
 
