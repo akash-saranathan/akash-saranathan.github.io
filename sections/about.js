@@ -51,7 +51,7 @@ const ABOUT_CONTENT = `
     <div class="about-bio-block">
       <h3 class="about-bio-title">Gratitude & Support</h3>
       <p>
-        Behind every line of code and every milestone is the <strong>unwavering support of my Family and Friends</strong> — their encouragement has been my greatest strength. I am deeply grateful for the <strong>blessings of God</strong> that have guided every step of this journey.
+        Behind every line of code and every milestone is the <strong>unwavering support of my Family and Friends</strong>, their encouragement has been my greatest strength. I am deeply grateful for the <strong>blessings of God</strong> that have guided every step of this journey.
       </p>
     </div>
 

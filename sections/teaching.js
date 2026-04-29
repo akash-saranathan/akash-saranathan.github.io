@@ -21,12 +21,12 @@ const TEACHING_CONTENT = `
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Guide students aspiring to pursue <strong>higher education abroad</strong> through personalized one-on-one sessions — covering university selection, course fit, and application strategy.</li>
-          <li>Help students craft compelling <strong>Statements of Purpose (SOPs) and Letters of Recommendation (LORs)</strong>, significantly improving their admission profiles.</li>
-          <li>Provide tailored <strong>career and course guidance</strong> based on individual strengths, interests, and long-term goals — fostering confidence and clarity in the higher education journey.</li>
+          <li>Mentored students aspiring for <strong>international higher education</strong> through 1:1 guidance sessions focused on university selection, program alignment, and application strategy.</li>
+          <li>Assisted in developing high-impact <strong>Statements of Purpose (SOPs) and Letters of Recommendation (LORs)</strong>, improving clarity, structure, and overall admission competitiveness.</li>
+          <li>Provided <strong>personalized career and academic pathway guidance</strong> based on individual strengths and long-term goals, enabling more informed and confident decision-making for higher education planning.</li>
         </ul>
         <div class="exp-tags">
-          <span>Mentoring</span><span>Career Counseling</span><span>SOP / LOR</span><span>Strategic Planning</span><span>Leadership</span>
+          <span>Mentoring</span><span>Career Guidance</span><span>SOP Writing</span><span>Admissions Strategy</span><span>Leadership</span>
         </div>
       </div>
     </div>
@@ -50,12 +50,12 @@ const TEACHING_CONTENT = `
           <span class="course-name">ECE 143 — Programming for Data Analysis · Winter 2025</span>
         </div>
         <ul class="exp-bullets">
-          <li>Supported <strong>ECE 143: Programming for Data Analysis</strong> — a course covering Python fundamentals, data structures, algorithms, and key libraries including <strong>NumPy, Pandas, and Matplotlib</strong>.</li>
-          <li>Developed <strong>assignment rubrics and quizzes</strong> to reinforce core Python and data analysis concepts, improving student learning outcomes.</li>
-          <li>Conducted <strong>office hours</strong> to guide students through programming assignments and help them navigate the Python ecosystem for data analysis.</li>
+          <li>Served as Teaching Assistant for <strong>ECE 143: Programming for Data Analysis</strong>, supporting instruction in Python fundamentals, data structures, and data science libraries including NumPy, Pandas, and Matplotlib.</li>
+          <li>Designed <strong>assignment rubrics and programming assessments</strong> to reinforce core concepts in data analysis and Python, improving clarity of evaluation and student learning outcomes.</li>
+          <li>Conducted <strong>office hours and hands-on debugging sessions</strong>, guiding students through Python-based data analysis workflows and strengthening practical programming skills.</li>
         </ul>
         <div class="exp-tags">
-          <span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Data Analysis</span><span>Teaching</span>
+          <span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Data Analysis</span><span>Teaching Assistant</span>
         </div>
       </div>
     </div>
@@ -79,12 +79,12 @@ const TEACHING_CONTENT = `
           <span class="course-name">CSE 256 / LING 256 — Statistical NLP · Fall 2024</span>
         </div>
         <ul class="exp-bullets">
-          <li>Supported <strong>CSE 256: Statistical Natural Language Processing</strong> — covering POS tagging, word sense disambiguation, parsing, <strong>Markov models, Hidden Markov Models, and probabilistic context-free grammars</strong>.</li>
-          <li>Designed <strong>comprehensive assignments and rubrics</strong> to deepen student understanding of statistical NLP methods and improve educational outcomes.</li>
-          <li>Conducted <strong>office hours</strong> helping students work through complex NLP algorithms and Python implementations.</li>
+          <li>Served as Teaching Assistant for <strong>CSE 256 / LING 256: Statistical Natural Language Processing</strong>, supporting instruction in core NLP concepts including POS tagging, parsing, word sense disambiguation, and probabilistic language models.</li>
+          <li>Designed and reviewed <strong>assignments and grading rubrics</strong> focused on statistical NLP methods such as Hidden Markov Models and probabilistic context-free grammars, improving conceptual clarity and evaluation consistency.</li>
+          <li>Conducted <strong>office hours and technical guidance sessions</strong>, helping students implement NLP algorithms in Python and strengthen understanding of probabilistic modeling techniques.</li>
         </ul>
         <div class="exp-tags">
-          <span>NLP</span><span>Statistical Models</span><span>HMM</span><span>Python</span><span>Curriculum Development</span><span>Teaching</span>
+          <span>NLP</span><span>Probabilistic Models</span><span>HMM</span><span>PCFG</span><span>Python</span><span>Teaching Assistant</span>
         </div>
       </div>
     </div>

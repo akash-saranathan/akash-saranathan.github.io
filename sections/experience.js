@@ -19,14 +19,38 @@ const EXPERIENCE_CONTENT = `<div class="exp-timeline">
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Engineered <strong>LangChain-powered ML and computer vision pipelines</strong> for Document Anomaly Detection (DAD), achieving <strong>95%+ accuracy</strong> across invoices, contracts, KYC, and compliance documents.</li>
-          <li>Designed end-to-end <strong>NLP and RAG pipelines</strong> with metadata tagging, semantic search, and multi-class document classification — improving retrieval accuracy, compliance reporting, and AI explainability.</li>
-          <li>Architected <strong>enterprise-grade chatbot orchestration</strong> for the COAST platform with metadata filters, PostgreSQL/Supabase RAG integration, and real-time analytics insights.</li>
-          <li>Built unified <strong>ETL pipelines from Snowflake and SharePoint</strong>, reducing data onboarding time by <strong>30%</strong> and enabling fresh data for ML model training and business intelligence.</li>
-          <li>Implemented <strong>MLOps quality gates</strong> with Pytest-driven data validation, anomaly detection, and schema enforcement — increasing AI output reliability for production analytics.</li>
-          <li>Automated data ingestion and enrichment workflows using <strong>Python and Power Automate</strong>, achieving <strong>50% faster execution</strong>, full lineage tracking, and zero-downtime scheduling.</li>
-          <li>Developed interactive <strong>monitoring dashboards with Power BI, Tableau, and Plotly Dash</strong> to track pipeline health, model performance (latency, accuracy, drift), and business KPIs.</li>
-        </ul>
+        <li>
+          Built intelligent <strong>LangChain-powered ML and computer vision systems</strong> for Document Anomaly Detection (DAD), achieving <strong>95%+ accuracy</strong> across invoices, contracts, and KYC workflows while reducing compliance risk.
+        </li>
+
+        <li>
+          Designed an <strong>AI agent–driven recruitment automation system</strong> that extracts job requirements, integrates candidate data from Supabase, ranks profiles, and automates screening workflows — reducing manual effort by <strong>~60%</strong>.
+        </li>
+
+        <li>
+          Developed scalable <strong>NLP and RAG pipelines</strong> with metadata-aware retrieval, semantic search, and multi-class classification — significantly improving document discovery, explainability, and compliance reporting.
+        </li>
+
+        <li>
+          Architected <strong>enterprise AI chatbot orchestration</strong> for the COAST platform, integrating metadata filtering, PostgreSQL (Supabase) retrieval, and real-time analytics for decision intelligence.
+        </li>
+
+        <li>
+          Designed and deployed <strong>unified ETL pipelines</strong> across Snowflake and SharePoint, reducing data onboarding time by <strong>30%</strong> and enabling continuously updated ML and BI systems.
+        </li>
+
+        <li>
+          Established <strong>MLOps quality frameworks</strong> using Pytest-driven validation, anomaly detection, and schema enforcement — ensuring reliability of production AI pipelines.
+        </li>
+
+        <li>
+          Automated large-scale <strong>data ingestion and enrichment workflows</strong> using Python and Power Automate, achieving <strong>50% faster execution</strong> with end-to-end lineage tracking.
+        </li>
+
+        <li>
+          Created <strong>interactive monitoring dashboards</strong> (Power BI, Tableau, Plotly Dash) to visualize pipeline health, model performance (latency, drift, accuracy), and business KPIs in real time.
+        </li>
+      </ul>
         <div class="exp-tags">
           <span>AI Agents</span><span>RAG</span><span>NLP</span><span>MLOps</span><span>Snowflake</span><span>PostgreSQL</span><span>Power BI</span><span>Python</span>
         </div>
@@ -48,12 +72,12 @@ const EXPERIENCE_CONTENT = `<div class="exp-timeline">
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Built an <strong>LLM-powered AI agent</strong> using LangChain and LlamaIndex for natural-language queries over SQL databases, improving user accessibility and query efficiency by <strong>40%</strong>.</li>
-          <li>Developed <strong>data-driven AI pipelines</strong> to extract, analyze, and generate actionable insights from tower datasets, enhancing operational decision-making by <strong>20%</strong>.</li>
-          <li>Automated data ingestion and preprocessing workflows, reducing manual workload and preparing datasets for rapid <strong>AI model experimentation and deployment</strong>.</li>
+          <li>Built an <strong>LLM-powered AI agent</strong> using LangChain and LlamaIndex to enable natural-language querying over SQL databases, improving query efficiency and user accessibility by <strong>40%</strong>.</li>
+          <li>Developed <strong>data-driven ML pipelines</strong> to process and analyze large-scale tower datasets, generating actionable insights that improved operational decision-making by <strong>20%</strong>.</li>
+          <li>Designed and automated <strong>end-to-end data ingestion and preprocessing workflows</strong>, accelerating dataset readiness for rapid model experimentation and deployment.</li>
         </ul>
         <div class="exp-tags">
-          <span>LLM Agents</span><span>LangChain</span><span>LlamaIndex</span><span>SQL</span><span>NLP</span><span>Data Pipelines</span>
+          <span>LLM Agents</span><span>LangChain</span><span>LlamaIndex</span><span>RAG</span><span>Semantic Search</span><span>SQL</span>
         </div>
       </div>
     </div>
@@ -73,12 +97,12 @@ const EXPERIENCE_CONTENT = `<div class="exp-timeline">
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Conducted comprehensive <strong>data analysis using PostgreSQL</strong> for data collection, correlation identification, and feature selection, with visualizations using Matplotlib and Seaborn.</li>
-          <li>Designed and implemented <strong>Random Forest and regression models</strong> to predict patient treatment timelines, achieving <strong>90%+ accuracy</strong> and improving recovery workflows.</li>
-          <li>Developed <strong>cloud-based predictive dashboards</strong> using AWS (S3, Redshift, QuickSight, Amazon Q), providing actionable insights into patient records and program trends — reducing decision-making time by <strong>30%</strong>.</li>
+          <li>Performed <strong>SQL-based exploratory data analysis</strong> on patient datasets, identifying key correlations and features to support predictive modeling and clinical decision workflows.</li>
+          <li>Built <strong>Random Forest and regression models</strong> to predict patient treatment timelines, achieving <strong>90%+ accuracy</strong> and improving recovery planning efficiency.</li>
+          <li>Developed <strong>cloud-based predictive dashboards</strong> using AWS (S3, Redshift, QuickSight), enabling real-time insights into patient trends and reducing decision-making time by <strong>30%</strong>.</li>
         </ul>
         <div class="exp-tags">
-          <span>PostgreSQL</span><span>Random Forest</span><span>AWS</span><span>Data Analysis</span><span>Predictive Modeling</span><span>Seaborn</span>
+          <span>PostgreSQL</span><span>Random Forest</span><span>AWS</span><span>Predictive Modeling</span><span>Data Visualization</span><span>Regression</span>
         </div>
       </div>
     </div>
@@ -98,12 +122,12 @@ const EXPERIENCE_CONTENT = `<div class="exp-timeline">
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Evaluated electrical machine performance using analytical tools and <strong>optimized model selection techniques</strong>, improving efficiency by <strong>20%</strong> and stability by <strong>15%</strong>.</li>
-          <li>Conducted analysis and testing using <strong>MATLAB, ANSYS, and Motorsolve</strong> to improve accuracy and stability of machine operations.</li>
-          <li>Designed and tested hardware components ensuring <strong>100% compliance</strong> with industry standards and requirements.</li>
+          <li>Analyzed <strong>electrical machine performance data</strong> to optimize model selection strategies, improving efficiency by <strong>30%</strong> and operational stability by <strong>20%</strong>.</li>
+          <li>Conducted <strong>simulation-driven data analysis</strong> using MATLAB, ANSYS, and Motorsolve to evaluate system behavior and enhance accuracy of performance predictions.</li>
+          <li>Designed and validated <strong>engineering components</strong> through data-backed testing, ensuring <strong>100% compliance</strong> with industry standards and reliability requirements.</li>
         </ul>
         <div class="exp-tags">
-          <span>MATLAB</span><span>ANSYS</span><span>Data Analysis</span><span>Python</span><span>Research</span>
+          <span>MATLAB</span><span>ANSYS</span><span>Simulation</span><span>Data Analysis</span><span>Model Optimization</span>
         </div>
       </div>
     </div>
@@ -123,12 +147,14 @@ const EXPERIENCE_CONTENT = `<div class="exp-timeline">
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Contributed to the construction of a <strong>400 KV GIS / 200 KV AIS substation</strong> project using industry-standard design software.</li>
-          <li>Gained hands-on expertise in <strong>power systems and transmission lines</strong> — bus bars, relays, circuit breakers, isolators, protection systems, and transformers.</li>
-          <li>Designed a <strong>layout system arrangement</strong> for GIS substation development and control using SCADA systems.</li>
+          <li>Supported design and development of a <strong>400 KV GIS / 200 KV AIS substation</strong> using industry-standard electrical design tools, contributing to large-scale power infrastructure planning.</li>
+
+          <li>Worked on <strong>power system components and protection architecture</strong>, including relays, circuit breakers, isolators, bus bars, and transformers, gaining practical exposure to transmission and distribution systems.</li>
+
+          <li>Assisted in designing a <strong>substation layout and control system</strong> integrating SCADA for monitoring and operational control of electrical infrastructure.</li>
         </ul>
         <div class="exp-tags">
-          <span>Power Systems</span><span>SCADA</span><span>GIS Substation</span><span>Electrical Engineering</span>
+          <span>Power Systems</span><span>SCADA</span><span>Substation Design</span><span>Electrical Engineering</span><span>Control Systems</span>
         </div>
       </div>
     </div>
@@ -148,12 +174,14 @@ const EXPERIENCE_CONTENT = `<div class="exp-timeline">
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Gained practical experience with <strong>auto transformers and distribution generators</strong> in a 230 KV substation environment.</li>
-          <li>Studied <strong>power transmission, cable layouts, and energy measurement</strong> systems in a live operational setting.</li>
-          <li>Designed a <strong>safety scheme using Buchholz relay</strong> for transformer protection during operations and maintenance.</li>
-        </ul>
+        <li>Worked in a <strong>230 KV substation environment</strong>, gaining hands-on exposure to auto transformers, distribution generators, and high-voltage operational systems.</li>
+
+        <li>Studied and analyzed <strong>power transmission infrastructure</strong>, including cable layouts and energy measurement systems in a live grid environment.</li>
+
+        <li>Designed a <strong>transformer protection scheme using Buchholz relay</strong>, focusing on fault detection and safety mechanisms during operation and maintenance activities.</li>
+      </ul>
         <div class="exp-tags">
-          <span>Power Distribution</span><span>Transformers</span><span>Energy Measurement</span><span>Electrical Systems</span>
+          <span>Power Distribution</span><span>Transformers</span><span>Substation Systems</span><span>Energy Measurement</span><span>Protection Systems</span>
         </div>
       </div>
     </div>

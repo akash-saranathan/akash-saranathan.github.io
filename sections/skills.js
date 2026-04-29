@@ -8,105 +8,110 @@ const SKILLS_CONTENT = `
 
     <!-- Row 1 -->
     <div class="skill-card">
-      <div class="skill-card-header">
-        <span class="skill-card-icon">💻</span>
-        <h3 class="skill-card-title">Languages</h3>
-      </div>
-      <div class="skill-tags">
-        <span>🐍 Python</span>
-        <span>📊 R</span>
-        <span>⚙️ C</span>
-        <span>⚙️ C++</span>
-        <span>🗄️ SQL</span>
-        <span>🐘 PostgreSQL</span>
-        <span>☕ Java</span>
-        <span>🌐 JavaScript</span>
-        <span>🌐 HTML</span>
-        <span>📐 MATLAB</span>
-        <span>🔧 Git</span>
-      </div>
+    <div class="skill-card-header">
+      <span class="skill-card-icon">💻</span>
+      <h3 class="skill-card-title">Languages & Web</h3>
     </div>
-
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <span class="skill-card-icon">🤖</span>
-        <h3 class="skill-card-title">ML & AI Frameworks</h3>
-      </div>
-      <div class="skill-tags">
-        <span>🔥 PyTorch</span>
-        <span>🧠 TensorFlow</span>
-        <span>🔗 Keras</span>
-        <span>🔬 Scikit-learn</span>
-        <span>👁️ OpenCV</span>
-        <span>⚡ PySpark</span>
-        <span>🐼 Pandas</span>
-        <span>🔢 NumPy</span>
-        <span>📈 Matplotlib</span>
-        <span>🔩 KNIME</span>
-        <span>🦙 LlamaIndex</span>
-        <span>🔗 LangChain</span>
-      </div>
+    <div class="skill-tags">
+      <span>🐍 Python</span>
+      <span>📊 R</span>
+      <span>⚙️ C</span>
+      <span>⚙️ C++</span>
+      <span>🗄️ SQL</span>
+      <span>🐘 PostgreSQL</span>
+      <span>☕ Java</span>
+      <span>🌐 JavaScript</span>
+      <span>⚛️ React (JSX)</span>
+      <span>🎨 HTML5</span>
+      <span>🎨 CSS3</span>
+      <span>🔧 Git</span>
     </div>
+  </div>
 
-    <div class="skill-card">
-      <div class="skill-card-header">
-        <span class="skill-card-icon">☁️</span>
-        <h3 class="skill-card-title">Cloud & Data Platforms</h3>
-      </div>
-      <div class="skill-tags">
-        <span>☁️ AWS</span>
-        <span>🔷 Azure</span>
-        <span>🧱 Databricks</span>
-        <span>❄️ Snowflake</span>
-        <span>🌐 Oracle Cloud</span>
-        <span>📊 Power BI</span>
-        <span>📉 Tableau</span>
-        <span>📗 Excel</span>
-        <span>⚡ Power Automate</span>
-        <span>🗃️ Supabase</span>
-      </div>
+  <div class="skill-card">
+    <div class="skill-card-header">
+      <span class="skill-card-icon">🤖</span>
+      <h3 class="skill-card-title">ML, AI & LLM Frameworks</h3>
     </div>
-
-    <!-- Row 2 -->
-    <div class="skill-card skill-card-wide">
-      <div class="skill-card-header">
-        <span class="skill-card-icon">🧬</span>
-        <h3 class="skill-card-title">AI/ML Domains</h3>
-      </div>
-      <div class="skill-tags">
-        <span>🤖 Machine Learning</span>
-        <span>🧠 Deep Learning</span>
-        <span>💬 NLP</span>
-        <span>🔮 Large Language Models</span>
-        <span>✍️ Prompt Engineering</span>
-        <span>👁️ Computer Vision</span>
-        <span>📚 RAG</span>
-        <span>🎨 Generative AI</span>
-        <span>🏗️ Data Engineering</span>
-        <span>📊 Data Science</span>
-        <span>📡 Data Analytics</span>
-        <span>🤝 AI Agents</span>
-      </div>
+    <div class="skill-tags">
+      <span>🔥 PyTorch</span>
+      <span>🧠 TensorFlow</span>
+      <span>🔗 Keras</span>
+      <span>🔬 Scikit-learn</span>
+      <span>👁️ OpenCV</span>
+      <span>⚡ PySpark</span>
+      <span>🐼 Pandas</span>
+      <span>🔢 NumPy</span>
+      <span>📈 Matplotlib</span>
+      <span>🤗 Hugging Face</span>
+      <span>🔀 Transformers</span>
+      <span>🦙 LlamaIndex</span>
+      <span>🔗 LangChain</span>
     </div>
+  </div>
 
-    <div class="skill-card skill-card-wide">
-      <div class="skill-card-header">
-        <span class="skill-card-icon">⚙️</span>
-        <h3 class="skill-card-title">MLOps & Engineering</h3>
-      </div>
-      <div class="skill-tags">
-        <span>🔄 ETL Pipelines</span>
-        <span>🚀 Model Deployment</span>
-        <span>⚡ FastAPI</span>
-        <span>🌶️ Flask</span>
-        <span>🔁 CI/CD</span>
-        <span>✅ Data Validation & Testing</span>
-        <span>🤖 Automation</span>
-        <span>🔌 API Development</span>
-        <span>📦 Docker</span>
-        <span>🧪 Pytest</span>
-        <span>📊 Model Monitoring</span>
-        <span>🔍 Data Quality</span>
+  <div class="skill-card">
+    <div class="skill-card-header">
+      <span class="skill-card-icon">☁️</span>
+      <h3 class="skill-card-title">Cloud & Data Platforms</h3>
+    </div>
+    <div class="skill-tags">
+      <span>☁️ AWS</span>
+      <span>🔷 Azure</span>
+      <span>🧱 Databricks</span>
+      <span>❄️ Snowflake</span>
+      <span>🌐 Oracle Cloud</span>
+      <span>📊 Power BI</span>
+      <span>📉 Tableau</span>
+      <span>📗 Excel</span>
+      <span>⚡ Power Automate</span>
+      <span>🗃️ Supabase</span>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="skill-card skill-card-wide">
+    <div class="skill-card-header">
+      <span class="skill-card-icon">🧬</span>
+      <h3 class="skill-card-title">AI/ML & GenAI Domains</h3>
+    </div>
+    <div class="skill-tags">
+      <span>🤖 Machine Learning</span>
+      <span>🧠 Deep Learning</span>
+      <span>💬 NLP</span>
+      <span>🔮 Large Language Models</span>
+      <span>📚 RAG</span>
+      <span>🎨 Generative AI</span>
+      <span>🤝 AI Agents</span>
+      <span>👁️ Computer Vision</span>
+      <span>✍️ Prompt Engineering</span>
+      <span>🧠 Vector Databases (FAISS, Pinecone, Chroma)</span>
+      <span>🔌 OpenAI API</span>
+      <span>🏗️ Data Engineering</span>
+      <span>📊 Data Science</span>
+      <span>📡 Data Analytics</span>
+    </div>
+  </div>
+
+  <div class="skill-card skill-card-wide">
+    <div class="skill-card-header">
+      <span class="skill-card-icon">⚙️</span>
+      <h3 class="skill-card-title">MLOps & Engineering</h3>
+    </div>
+    <div class="skill-tags">
+      <span>🔄 ETL Pipelines</span>
+      <span>🚀 Model Deployment</span>
+      <span>⚡ FastAPI</span>
+      <span>🌶️ Flask</span>
+      <span>🔌 REST API Integration</span>
+      <span>🔁 CI/CD</span>
+      <span>📦 Docker</span>
+      <span>☸️ Airflow</span>
+      <span>🧪 Pytest</span>
+      <span>📊 Model Monitoring</span>
+      <span>🔍 Data Quality</span>
+      <span>🤖 Automation</span>
+      <span>🖥️ Streamlit</span>
       </div>
     </div>
 

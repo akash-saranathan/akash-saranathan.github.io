@@ -22,10 +22,10 @@ const RESEARCH_CONTENT = `
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Developed and fine-tuned <strong>Multi-Modal Large Language Models (LLMs)</strong> for accurate genomic predictions, enhancing gene functional analysis at scale.</li>
-          <li>Collected, scraped, and preprocessed large-scale <strong>gene datasets from NCBI</strong>, building robust data pipelines for model training and evaluation.</li>
-          <li>Achieved a <strong>BLEU score of 0.205</strong> on genomic prediction tasks, outperforming baseline GPT models (0.143) — a <strong>43% improvement</strong>.</li>
-          <li>Research accepted at an <strong>ICML 2025 Workshop</strong> — one of the most prestigious machine learning conferences globally.</li>
+          <li>Designed and fine-tuned <strong>multi-modal Large Language Models (LLMs)</strong> for gene function prediction, enabling scalable and context-aware genomic reasoning.</li>
+          <li>Built robust <strong>data pipelines using NCBI datasets</strong>, processing and structuring large-scale biological data for model training and evaluation.</li>
+          <li>Achieved a <strong>BLEU score of 0.205</strong>, outperforming baseline GPT models (0.143), a <strong>43% improvement</strong> in prediction quality.</li>
+          <li>Proposed <strong>GeneChat</strong>, a novel LLM-driven framework for genomic understanding, accepted at an <strong>ICML 2025 Workshop</strong>.</li>
         </ul>
         <div class="exp-tags">
           <span>LLMs</span><span>Genomics</span><span>Fine-tuning</span><span>PyTorch</span><span>NLP</span><span>Bioinformatics</span><span>ICML 2025</span>
@@ -48,9 +48,9 @@ const RESEARCH_CONTENT = `
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Applied <strong>edge detection methods (Canny, Roberts, Sobel)</strong> for noise reduction, precise edge localization, and image quality enhancement in medical imaging workflows.</li>
-          <li>Trained <strong>Convolutional Neural Networks (CNNs)</strong> on X-ray images to detect eye diseases including glaucoma through effective image segmentation.</li>
-          <li>Implemented <strong>segmentation techniques</strong> to identify vaso-obliteration zones and neovascular clusters in retinopathy mouse model images with <strong>85% precision</strong>.</li>
+          <li>Developed <strong>computer vision pipelines</strong> using edge detection (Canny, Roberts, Sobel) to enhance medical image quality and feature extraction.</li>
+          <li>Trained <strong>CNN-based models</strong> for automated detection of eye diseases, including glaucoma, from X-ray and imaging data.</li>
+          <li>Implemented <strong>segmentation models</strong> to identify vaso-obliteration zones and neovascular regions, achieving <strong>85% precision</strong>.</li>
         </ul>
         <div class="exp-tags">
           <span>Computer Vision</span><span>CNN</span><span>Medical Imaging</span><span>Image Segmentation</span><span>Deep Learning</span><span>Python</span>
@@ -73,10 +73,10 @@ const RESEARCH_CONTENT = `
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Designed a <strong>cost-effective, rare earth-free ferrite magnet-based motor drive</strong> to meet International Efficiency (IE4) standards for solar-powered water pumping applications.</li>
-          <li>Performed <strong>electromagnetic design and analysis</strong> using ANSYS Maxwell and Motorsolve, including FEA-based thermal and vibration analysis.</li>
-          <li>Designed pump parameters and induction motor dimensions — optimizing rotor structure for <strong>high pressure, low torque ripple</strong> performance.</li>
-          <li>Produced a comprehensive <strong>research report</strong> covering simulation, experimental setup, efficiency comparison, and future scope.</li>
+          <li>Designed a <strong>rare earth-free, energy-efficient motor drive</strong> achieving IE4 efficiency standards for solar-powered pumping systems.</li>
+          <li>Conducted <strong>electromagnetic and thermal analysis</strong> using ANSYS Maxwell and Motorsolve, optimizing performance and durability.</li>
+          <li>Optimized motor and pump design parameters for <strong>high pressure output and reduced torque ripple</strong>.</li>
+          <li>Delivered a comprehensive <strong>research study</strong> covering simulation, experimental validation, and performance benchmarking.</li>
         </ul>
         <div class="exp-tags">
           <span>ANSYS Maxwell</span><span>Motorsolve</span><span>FEA</span><span>Motor Design</span><span>Solar Energy</span><span>MATLAB</span><span>Research</span>

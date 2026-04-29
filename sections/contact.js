@@ -9,12 +9,12 @@ const CONTACT_CONTENT = `
 
     <div class="contact-cards-row">
 
-      <a href="mailto:youremail@example.com" class="contact-card">
+      <a href="mailto:akashsaranathan@gmail.com" class="contact-card">
         <div class="contact-card-icon">
           <img src="https://www.google.com/s2/favicons?sz=64&domain=gmail.com" alt="Email">
         </div>
         <span class="contact-card-label">Email</span>
-        <span class="contact-card-value">example@example.com</span>
+        <span class="contact-card-value">akashsaranathan@gmail.com</span>
         <span class="contact-card-arrow">→</span>
       </a>
 

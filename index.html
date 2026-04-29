@@ -30,12 +30,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 html { 
   scroll-behavior: smooth; 
-  scroll-padding-top: 64px; /* exact navbar height + small breathing room */
+  scroll-padding-top: 0; /* handled per-section via scroll-margin-top */
 }
 
 /* Mobile adjustment */
 @media(max-width:900px){
-  html { scroll-padding-top: 100px; } /* account for mobile menu height */
+  html { scroll-padding-top: 0; }
 }
     body { font-family: 'Roboto', sans-serif; line-height: 1.6; background: linear-gradient(to right, var(--page-bg1), var(--page-bg2)); color: #fff; }
 
@@ -119,7 +119,10 @@ html {
       padding: 60px 40px; /* full-bleed section background */
       margin: 0; /* full width */
       min-height: 100vh;
-      /* scroll-margin-top: 20px; */
+      /* ensure anchor jumps sit below the fixed navbar */
+      padding-top: 10px !important;   /* Reduces space inside the white area */
+      padding-bottom: 40px !important; 
+      scroll-margin-top: 60px !important; /* Adjust this to match navbar height */
       background: var(--section-bg);
       color: var(--section-text);
       opacity: 0;
@@ -218,6 +221,8 @@ html {
   }    
   .hero h1 { font-size: 1.8rem; }
   section { padding:60px 15px 40px; }
+  /* smaller offset for mobile where nav/menu is taller */
+  section { scroll-margin-top: 110px; }
   .hero { padding:20px 10px; }         /* reduce hero padding */
 .hero h1 { font-size: clamp(2rem, 10vw, 3rem); }
 .hero h2 { font-size: clamp(1rem, 4vw, 1.5rem); }
@@ -261,7 +266,7 @@ html {
     <img src="images/profile.jpg" alt="Your Photo">
     <h1>Akash Saranathan</h1>
     <h2>AI/ML Engineer | Data Scientist | LLM Researcher | Mentor</h2>
-    <p>I design and build intelligent systems powered by machine learning and LLMs focused on solving real-world problems with scalable, production-ready solutions.</p>
+    <p>I design and build intelligent systems powered by machine learning and Large Language Models. My work focuses on transforming complex research into scalable, production-ready solutions that solve real-world problems. I am passionate about optimizing model performance and architecting robust data pipelines to drive meaningful technical impact.</p>
                 <div class="socials" style="margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center">
                 <a class="contact-link c1" href="mailto:example@example.com">Email</a>
                 <a class="contact-link c2" href="https://www.linkedin.com/in/a-saranathan" target="_blank">LinkedIn</a>
@@ -392,19 +397,70 @@ document.querySelectorAll('#nav-menu a').forEach(function(a) {
 });
 </script>
 <script>
-// Fix extra space on revisiting sections with dynamic content
-window.addEventListener('load', () => {
-  // If URL has a hash like #about, #projects, etc.
-  if(window.location.hash){
-    const target = document.querySelector(window.location.hash);
-    if(target){
-      // Small delay to let JS content load
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 50); // 50ms usually works; increase to 100ms if needed
+// Consistent anchor scrolling that accounts for the fixed navbar height.
+(() => {
+  const nav = document.querySelector('nav');
+  const getNavHeight = () => nav ? nav.getBoundingClientRect().height : 64;
+
+  // Smooth-scroll to anchors with correct offset.
+  // Accounts for any `transform: translateY(...)` on the target so measurement
+  // matches the element's final visual position and prevents a one-time jump.
+  function getTranslateY(el){
+    const t = getComputedStyle(el).transform;
+    if(!t || t === 'none') return 0;
+    // matrix(a, b, c, d, tx, ty) -> ty is index 5
+    const m3 = t.match(/matrix3d\((.+)\)/);
+    if(m3){
+      const vals = m3[1].split(',').map(Number);
+      return vals[13] || 0;
     }
+    const m = t.match(/matrix\((.+)\)/);
+    if(m){
+      const vals = m[1].split(',').map(Number);
+      return vals[5] || 0;
+    }
+    return 0;
   }
-});
+
+  function scrollToHash(hash, behavior = 'smooth'){
+    try{
+      const target = document.querySelector(hash);
+      if(!target) return;
+      const translateY = getTranslateY(target);
+      const top = target.getBoundingClientRect().top + window.pageYOffset - translateY - getNavHeight() - 8; // small breathing room
+      window.scrollTo({ top, behavior });
+    }catch(e){ /* ignore invalid selectors */ }
+  }
+
+  // Attach to all internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e){
+      const hash = this.getAttribute('href');
+      if(!hash || hash === '#') return;
+      const target = document.querySelector(hash);
+      if(!target) return;
+      e.preventDefault();
+      // update URL and perform consistent scroll
+      history.pushState(null, '', hash);
+      scrollToHash(hash, 'smooth');
+      // close mobile menu if open
+      const menu = document.getElementById('nav-menu');
+      if(menu) menu.classList.remove('open');
+    });
+  });
+
+  // On page load with a hash, jump to it after a short delay so section content has rendered
+  window.addEventListener('load', () => {
+    if(window.location.hash){
+      setTimeout(() => scrollToHash(window.location.hash, 'auto'), 60);
+    }
+  });
+  // Handle back/forward navigation
+  window.addEventListener('popstate', () => {
+    if(window.location.hash) scrollToHash(window.location.hash, 'auto');
+    else window.scrollTo({ top: 0, behavior: 'auto' });
+  });
+})();
 </script>
 
 </body>
